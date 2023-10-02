@@ -34,27 +34,16 @@ initApp = () => {
   const div = view.querySelector("div");
   const h2 = div.querySelector("h2");
 
-  view.addEventListener(
-    "click",
-    (event) => {
-      view.style.background = "purple";
-    },
-    true
-  );
+  view.addEventListener("click", (event) => {
+    view.style.background = "purple";
+  });
 
-  div.addEventListener(
-    "click",
-    (event) => {
-      div.style.background = "blue";
-    },
-    true
-  );
+  div.addEventListener("click", (event) => {
+    div.style.background = "blue";
+  });
 
-  h2.addEventListener(
-    "click",
-    (event) => {
-      event.target.textContent = "Clicked";
-    },
-    true
-  );
+  h2.addEventListener("click", (event) => {
+    event.stopPropagation();
+    event.target.textContent = "Clicked";
+  });
 };
