@@ -39,11 +39,11 @@ initApp = () => {
   });
 
   div.addEventListener("click", (event) => {
+    event.stopPropagation();
     div.style.background = "blue";
   });
 
   h2.addEventListener("click", (event) => {
-    event.stopPropagation();
     event.target.textContent = "Clicked";
   });
 };
