@@ -35,15 +35,19 @@ initApp = () => {
   const h2 = div.querySelector("h2");
 
   view.addEventListener("click", (event) => {
-    view.style.background = "purple";
+    view.classList.toggle("purple");
+    view.classList.toggle("darkblue");
   });
 
   div.addEventListener("click", (event) => {
-    event.stopPropagation();
-    div.style.background = "blue";
+    div.classList.toggle("blue");
+    div.classList.toggle("black");
   });
 
   h2.addEventListener("click", (event) => {
-    event.target.textContent = "Clicked";
+    const myText = event.target.textContent;
+    myText === "My 2nd View"
+      ? (event.target.textContent = "Clicked")
+      : (event.target.textContent = "My 2nd View");
   });
 };
