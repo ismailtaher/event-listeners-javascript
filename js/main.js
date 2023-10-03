@@ -29,7 +29,7 @@ document.addEventListener("readystatechange", (event) => {
   }
 });
 
-initApp = () => {
+/* initApp = () => {
   const view = document.querySelector("#view2");
   const div = view.querySelector("div");
   const h2 = div.querySelector("h2");
@@ -63,5 +63,15 @@ initApp = () => {
   // Removes the class the increased the size of our nav
   nav.addEventListener("mouseout", (event) => {
     event.target.classList.remove("height100");
+  });
+};
+ */
+
+const initApp = () => {
+  const view3 = document.querySelector("#view3");
+  const myForm = view3.querySelector("#myForm");
+  myForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.log("Submit Event");
   });
 };
