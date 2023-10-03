@@ -50,4 +50,18 @@ initApp = () => {
       ? (event.target.textContent = "Clicked")
       : (event.target.textContent = "My 2nd View");
   });
+
+  // Adding a new Event Listener to our nav
+
+  const nav = document.querySelector("nav");
+
+  // Increases the size of our nav
+  nav.addEventListener("mouseover", (event) => {
+    event.target.classList.add("height100");
+  });
+
+  // Removes the class the increased the size of our nav
+  nav.addEventListener("mouseout", (event) => {
+    event.target.classList.remove("height100");
+  });
 };
